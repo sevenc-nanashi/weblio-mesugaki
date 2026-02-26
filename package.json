@@ -1,0 +1,21 @@
+{
+  "name": "weblio-mesugaki",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "lint": "oxlint . --fix",
+    "build": "vite build",
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "consola": "^3.4.2",
+    "oxfmt": "^0.35.0",
+    "oxlint": "^1.50.0",
+    "vite": "^7.3.1",
+    "vite-plugin-monkey": "^7.1.9"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
