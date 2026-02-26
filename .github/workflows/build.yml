@@ -30,7 +30,7 @@ jobs:
       - name: Build
         run: |
           bun run build
-          cp dist/index.user.js /tmp/index.user.js
+          cp dist/weblio-mesugaki.user.js /tmp/weblio-mesugaki.user.js
 
       - name: Commit
         run: |
@@ -49,8 +49,8 @@ jobs:
       - name: Copy built file
         run: |
           git clean -df
-          cp /tmp/index.user.js index.user.js
-          git add index.user.js
+          cp /tmp/weblio-mesugaki.user.js weblio-mesugaki.user.js
+          git add weblio-mesugaki.user.js
           git commit -am "release: v${{ github.event.inputs.version }}"
           git push origin built
 
