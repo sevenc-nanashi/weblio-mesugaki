@@ -11,16 +11,17 @@
   function maybeGetElementBySelector(selector, from = document) {
     return from.querySelector(selector);
   }
-  function getElementBySelector(selector, from = document) {
-    const element = maybeGetElementBySelector(selector, from);
-    if (!element) {
-      throw new Error(`No element found for selector: ${selector}`);
-    }
-    return element;
+  const pcElement = maybeGetElementBySelector(".content-explanation");
+  if (pcElement) {
+    const content = pcElement.innerHTML;
+    const heart = "❤️";
+    pcElement.innerHTML = content.replaceAll("、", heart) + heart;
   }
-  const mainElement = getElementBySelector(".content-explanation");
-  const content = mainElement.innerHTML;
-  const heart = "❤️";
-  mainElement.innerHTML = content.replaceAll("、", heart) + heart;
+  const mobileElement = maybeGetElementBySelector(".explanation");
+  if (mobileElement) {
+    const content = mobileElement.innerHTML;
+    const heart = "❤️";
+    mobileElement.innerHTML = content.replaceAll(",", heart) + heart;
+  }
 
 })();
