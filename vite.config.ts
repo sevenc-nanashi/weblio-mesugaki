@@ -9,9 +9,8 @@ export default defineConfig({
       userscript: {
         name: "Weblio Mesugaki-ifyier",
         version: "1.0.0",
-        description:
-          "Weblio英和辞典の意味の読点をハートにするユーザースクリプト",
-        match: ["https://ejje.weblio.jp/content/*"],
+        description: "Weblio英和辞典の意味の読点をハートにするユーザースクリプト",
+        match: ["https://ejje.weblio.jp/content/*", "https://thesaurus.weblio.jp/content/*"],
       },
     }),
   ],
